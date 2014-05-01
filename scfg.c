@@ -114,9 +114,9 @@ _add_key_child(struct scfg_node **node, char *key)
     nn = realloc(tmpnode->data.b.branches,
                  sizeof(struct scfg_node) * (tmpnode->data.b.n + 1));
     if ( NULL == nn ) {
-        errno = errno_saved;
-        free(nkey);
         errno_saved = errno;
+        free(nkey);
+        errno = errno_saved;
         return -1;
     }
     /* Add a new branch with the specified key */

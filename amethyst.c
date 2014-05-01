@@ -26,7 +26,7 @@ static void _usage(const char *);
 static void
 _usage(const char *prog)
 {
-    error_quit("Usage: %s [cdnsd|chttpd] [start|stop|status]", prog);
+    error_quit("Usage: %s [dnsd] [start|stop|status]", prog);
 }
 
 /*
@@ -49,8 +49,8 @@ main(int argc, const char *const argv[], const char *const envp[])
     proc = argv[1];
     cmd = argv[2];
 
-    if ( 0 == strcmp(proc, "atomos") ) {
-        binpath = "./atomos";
+    if ( 0 == strcmp(proc, "dnsd") ) {
+        binpath = "./dnsd";
         pidfile = PATH_ATOMOS_PID;
     } else {
         _usage(argv[0]);
