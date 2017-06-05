@@ -1,13 +1,11 @@
 #
-# $Id$
-#
-# Copyright (c) 2013 Scyphus Solutions Co. Ltd.  All rights reserved.
+# Copyright (c) 2013-2014 Scyphus Solutions Co. Ltd.  All rights reserved.
 # Authors:
-#      Hirochika Asai  <asai@scyphus.co.jp>
+#      Hirochika Asai  <asai@jar.jp>
 #
 
 AC_PREREQ(2.59)
-AC_INIT([amethyst], [0.1.0], [bug@scyphus.co.jp])
+AC_INIT([amethyst], [0.2.0], [bug@scyphus.co.jp])
 AC_CONFIG_SRCDIR([amethyst.c])
 AC_CONFIG_HEADER([config.h])
 

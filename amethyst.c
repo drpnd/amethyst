@@ -1,8 +1,8 @@
 /*_
- * Copyright 2013 Scyphus Solutions Co. Ltd.  All rights reserved.
+ * Copyright 2013-2014 Scyphus Solutions Co. Ltd.  All rights reserved.
  *
  * Authors:
- *      Hirochika Asai  <asai@scyphus.co.jp>
+ *      Hirochika Asai  <asai@jar.jp>
  */
 
 /* $Id$ */
@@ -44,13 +44,13 @@ main(int argc, const char *const argv[], const char *const envp[])
 
     /* Check the arguments */
     if ( argc != 3 ) {
-        error_quit("Usage: %s proc command", argv[0]);
+        _usage(argv[0]);
     }
     proc = argv[1];
     cmd = argv[2];
 
     if ( 0 == strcmp(proc, "dnsd") ) {
-        binpath = "./dnsd";
+        binpath = "./atomos";
         pidfile = PATH_ATOMOS_PID;
     } else {
         _usage(argv[0]);
